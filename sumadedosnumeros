@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a,b,c;
+    cout<<"Ingrese primer número: ";
+    cin>>a;
+    cout<<"Ingrese segundo número: ";
+    cin>>b;
+    c=a+b;
+    cout<<"La suma de los dos números es: "<< c;
+
+    return 0;
+}
+© 2020 GitHub, Inc.
