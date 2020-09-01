@@ -1,0 +1,31 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    float I, C, T, t, N;
+    cout<<"Ingrese el monto del capital inicial: "<<endl;
+    cin>> C;
+    cout<<"Ingrese la tasa de interes: "<<endl;
+    cin>> T;
+    cout<<"Ingrese el plazo: "<<endl;
+    cin>> N;
+
+    t=T/100;
+    I=C*(pow((t+1),N));
+
+    ;cout<<"El interes compuesto es: "<<endl;
+    cout<< I;
+
+    return 0;
+}
