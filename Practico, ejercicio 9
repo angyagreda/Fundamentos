@@ -1,0 +1,37 @@
+// horas y seg.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+
+using namespace std;
+
+int main()
+{
+	int horas, segundos, minutos, seg, d,a;
+
+	cout<<"Este es un programa que le permitira transformar un cantidad en segundos a horas, minutos y segundos."<<endl;
+	cout<<"Ingrese una cantidad en segundod: "<<endl;
+	cin>> segundos;
+
+	d=segundos/60;
+    seg=segundos%60;
+
+	a=d/60;
+	minutos=d%60;
+	horas=a;
+
+	cout<<"El resultado en horas, minutos y segundos es: "<<endl;
+	cout<<"Horas: ";
+	cout<< horas<<endl;
+	cout<<"Minutos: ";
+	cout<< minutos<<endl;
+	cout<<"Segundos: ";
+	cout<< seg<<endl;
+
+	getch();
+	return 0;
+}
