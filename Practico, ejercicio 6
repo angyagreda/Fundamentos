@@ -1,0 +1,45 @@
+// ejercicio 6.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+int main()
+{
+
+	int hora, minuto, segundo, h;
+
+    cout<<"Este es un programa que le permitira convertir una hora dada en formato 24 hr a formato de 12 hr (AM-PM)"<<endl;
+	cout<<"Ingrese una hora en formato 24 hr"<<endl;
+	cout<<"hora: "<<endl;
+	cin>> hora;
+	cout<<"minuto: "<<endl;
+	cin>> minuto;
+	cout<<"segundo: "<<endl;
+	cin>> segundo;
+
+	if(hora>12)
+	{
+		h=hora-12;
+		cout<<"Esta es la hora:";
+		cout<< h<<endl;
+		cout<< minuto;
+		cout<<segundo;
+		cout<<"PM";
+	}
+	else
+	{
+		cout<<"Esta es la hora: ";
+		cout<< hora;
+		cout<< minuto;
+		cout<< segundo;
+		cout<<"AM";
+	}
+
+	getch();
+	return 0;
+}
