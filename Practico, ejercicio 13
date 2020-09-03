@@ -1,0 +1,54 @@
+// ejercicio 13.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+int main()
+{
+	    float a, b, c, d, x1, x2, xu, i1, i2;
+	    cout<<"Este programa podra resolver una ecuacion cuadratica de tipo ax2 + bx c"<<endl;
+		cout<<"Ingrese la variable a: ";
+		cin>> a;
+		cout<<"Ingrse la variable b: ";
+		cin>> b;
+		cout<<"Ingrese la variable c: ";
+		cin>> c;
+		d=b*b-4*a*c;
+
+		if (d>0)
+		{
+			x1=(-b+ sqrt(b*b-(4*a*c)))/2*a;
+			x2=(-b- sqrt(b*b-(4*a*c)))/2*a;
+			cout<<"Soluciones reales: x1="<<x1<<" x2"<<x2;
+		}
+
+		if(d==0)
+		{
+			x1=(-b+(sqrt(d))/2*a);
+			x2=(-b-(sqrt(d))/2*a);
+			cout<<"x1= "<<x1<<endl;
+			cout<<"x2= "<<x2<<endl;
+		}
+		
+		if(d<0)
+		{
+			x1=(-b)/(2*a);
+			x2=(-b)/(2*a);
+			d=(-1)*(d);
+			i1=(sqrt(d))/(2*a);
+			i2=((-1)*sqrt(d))/(2*a);
+
+			cout<<"x1= "<<x1<<" + "<<i1<<"i"<<endl;
+			cout<<"x2= "<<x2<<" + "<<i2<<"i"<<endl;
+		}
+
+    getch();
+	return 0;
+}
+
+
