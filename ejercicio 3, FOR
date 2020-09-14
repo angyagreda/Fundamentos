@@ -1,0 +1,26 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+int main()
+{
+	int n=0, suma=0;
+
+	cout<<"Este es un programa que podra calcular la suma de cuadrados de n numeros"<<endl;
+	cout<<"Ingrese una cantidad n de numeros: ";
+	cin>> n;
+
+	for (int i=0; i<=n; i++)
+	{
+		suma = suma + powf(i,2);
+	}
+
+	cout<<"La suma de cuadrados hasta: "<< n<<endl;
+	cout<<"Es: "<<suma<<endl;
+
+	getch();
+	return 0;
+}
