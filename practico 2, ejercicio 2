@@ -1,0 +1,30 @@
+// ejercicio 2, P2.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+int main()
+{
+	int suma=0, n, i=0;
+
+	cout<<"Ingrese una cantidad n de numeros: ";
+	cin>> n;
+
+	for ( i=0; i<=n; i++)
+	{	
+		if(i %2 !=0){
+			suma=suma+i;
+		}
+	}
+
+	cout<<"La suma de los numeros impares de n cantidad "<<n<<endl;
+	cout<<"Es: "<<suma;
+
+	getch();
+	return 0;
+}
