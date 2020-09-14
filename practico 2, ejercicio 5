@@ -1,0 +1,26 @@
+#include "stdafx.h"
+#include <iostream>
+#include "math.h"
+#include "conio.h"
+
+using namespace std;
+
+int main()
+{
+	int n=0, multi=1;
+
+	cout<<"Este es un programa que le permitira multiplicar una cantidad de n numeros"<<endl;
+	cout<<"Ingrese una cantidad n de numeros: ";
+	cin>> n;
+
+	for (int i=1; i<=n; i++)
+	{
+		multi= multi * i;
+	}
+	
+	cout<<"La multiplicacion de: "<<n<<endl;
+	cout<< "Es: "<<multi;
+
+	getch();
+	return 0;
+}
