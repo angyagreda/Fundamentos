@@ -1,0 +1,76 @@
+// vectores 1.cpp : Defines the entry point for the console application.
+//
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void cargarVector(int Vec[], float x);
+void PromedioPares(int Vec[], float x);
+void SumaImpares(int Vec[], float x);
+int main()
+{
+	int Vec[100], n;
+	char op;
+	cout<<"Cuantos numeros desea ingresar en el vector?"<<endl;
+	cin>>n;
+	do{
+		cout<<"---------Ejemplo de Menu-----------"<<endl;
+		cout<<"a.- Cargar vectores"<<endl;
+		cout<<"b.- Diferencia de Promedios Pares"<<endl;
+		cout<<"c.- Suma y Conteo de Impares"<<endl;
+		cout<<"x.- Salir"<<endl;
+		cout<<"---------Fin de Menu-----------"<<endl;
+		cin>>op;
+		switch(op){
+			case 'a':cargarVector(Vec,n);
+				break;
+			case 'b':
+				PromedioPares(Vec,n);
+				break;
+			case 'c':
+				SumaImpares(Vec,n);
+				break;
+			default:
+				cout<<"Salir";
+		}
+	}
+	while(op!='x');
+	getch();
+	return 0;
+}
+
+void cargarVector(int Vec[], float x){
+	for(int i=0; i<x; i++){
+		cout<<"Ingrese el valor de la posicion "<<i+1<<": ";
+		cin>>Vec[i];
+	}
+}
+
+void PromedioPares(int Vec[], float x){
+	int par=0, suma=0;
+	float promedio=0;
+	for(int i=0; i<x; i++){
+		if(Vec[i]%2==0){
+			suma=suma+Vec[i];
+			par++;
+		}
+	}
+	promedio=suma/par;
+	cout<<"El promedio de los pares es: "<<promedio<<endl;
+}
+
+void SumaImpares(int Vec[], float x){
+	int impar=0, suma=0;
+	float promedio=0;
+	for(int i=0; i<x; i++){
+		if(Vec[i]%2!=0){
+			suma=suma+Vec[i];
+			impar++;
+		}
+	}
+	cout<<"La suma de impares es: "<<suma<<endl;
+	cout<<"La cantidad de impares es: "<<impar<<endl;
+}
